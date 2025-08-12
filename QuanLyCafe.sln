@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyQuanCafe", "GUI\QuanLyQuanCafe.csproj", "{FE3FE46A-091E-4944-B792-DEB9693ED5EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{88CE36C2-1569-4B5E-B838-1CB931D40BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{0435A134-CA25-431E-B993-A05D3737EEE7}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "CoffeShopSetup", "CoffeShopSetup\CoffeShopSetup.aiproj", "{A370C9B1-2279-412C-BAE2-AFE7A9779A37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3FE46A-091E-4944-B792-DEB9693ED5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3FE46A-091E-4944-B792-DEB9693ED5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3FE46A-091E-4944-B792-DEB9693ED5EE}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3FE46A-091E-4944-B792-DEB9693ED5EE}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{FE3FE46A-091E-4944-B792-DEB9693ED5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3FE46A-091E-4944-B792-DEB9693ED5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CE36C2-1569-4B5E-B838-1CB931D40BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CE36C2-1569-4B5E-B838-1CB931D40BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CE36C2-1569-4B5E-B838-1CB931D40BAB}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CE36C2-1569-4B5E-B838-1CB931D40BAB}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{88CE36C2-1569-4B5E-B838-1CB931D40BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CE36C2-1569-4B5E-B838-1CB931D40BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0435A134-CA25-431E-B993-A05D3737EEE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0435A134-CA25-431E-B993-A05D3737EEE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0435A134-CA25-431E-B993-A05D3737EEE7}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{0435A134-CA25-431E-B993-A05D3737EEE7}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{0435A134-CA25-431E-B993-A05D3737EEE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0435A134-CA25-431E-B993-A05D3737EEE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A370C9B1-2279-412C-BAE2-AFE7A9779A37}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{A370C9B1-2279-412C-BAE2-AFE7A9779A37}.Debug|Any CPU.Build.0 = DefaultBuild
+		{A370C9B1-2279-412C-BAE2-AFE7A9779A37}.DefaultBuild|Any CPU.ActiveCfg = DefaultBuild
+		{A370C9B1-2279-412C-BAE2-AFE7A9779A37}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
+		{A370C9B1-2279-412C-BAE2-AFE7A9779A37}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{A370C9B1-2279-412C-BAE2-AFE7A9779A37}.Release|Any CPU.Build.0 = DefaultBuild
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF7F0E04-6F09-431C-AFD6-EAF0D8FA949E}
+	EndGlobalSection
+EndGlobal

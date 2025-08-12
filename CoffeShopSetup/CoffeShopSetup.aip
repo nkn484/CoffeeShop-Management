@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.0" version="22.0" Modules="simple" RootPath="." Language="en" Id="{0C102570-A2A6-446C-9A90-08A4E4FEDEB6}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION;AI_DETECTED_SQLEXPRESS_VERSION"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.8" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.8" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_DISPLAY" MultiBuildValue="DefaultBuild:SQL Server Express 2022" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_VERSION" MultiBuildValue="DefaultBuild:2022" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPHELPTELEPHONE" Value="0869553721"/>
+    <ROW Property="ARPPRODUCTICON" Value="mobileapp.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="LUONG NHAT TRUONG"/>
+    <ROW Property="ProductCode" Value="1033:{8666789D-3313-4A8B-A35F-C5E5A542136A} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="COFFEE SHOP MANAGEMENT"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{7BA98DC9-EBB1-46DF-9958-BA61F47C2D13}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60Display" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DATA_Dir" Directory_Parent="APPDIR" DefaultDir="DATA"/>
+    <ROW Directory="Release_Dir" Directory_Parent="APPDIR" DefaultDir="Release"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="app.publish_Dir" Directory_Parent="Release_Dir" DefaultDir="APP~1.PUB|app.publish"/>
+    <ROW Directory="de_Dir" Directory_Parent="Release_Dir" DefaultDir="de"/>
+    <ROW Directory="es_Dir" Directory_Parent="Release_Dir" DefaultDir="es"/>
+    <ROW Directory="fr_Dir" Directory_Parent="Release_Dir" DefaultDir="fr"/>
+    <ROW Directory="it_Dir" Directory_Parent="Release_Dir" DefaultDir="it"/>
+    <ROW Directory="ja_Dir" Directory_Parent="Release_Dir" DefaultDir="ja"/>
+    <ROW Directory="ko_Dir" Directory_Parent="Release_Dir" DefaultDir="ko"/>
+    <ROW Directory="pt_Dir" Directory_Parent="Release_Dir" DefaultDir="pt"/>
+    <ROW Directory="ru_Dir" Directory_Parent="Release_Dir" DefaultDir="ru"/>
+    <ROW Directory="x64_Dir" Directory_Parent="Release_Dir" DefaultDir="x64"/>
+    <ROW Directory="x86_Dir" Directory_Parent="Release_Dir" DefaultDir="x86"/>
+    <ROW Directory="zhCHS_Dir" Directory_Parent="Release_Dir" DefaultDir="zh-CHS"/>
+    <ROW Directory="zhCHT_Dir" Directory_Parent="Release_Dir" DefaultDir="zh-CHT"/>
+    <ROW Directory="zhHans_Dir" Directory_Parent="Release_Dir" DefaultDir="zh-Hans"/>
+    <ROW Directory="zhHant_Dir" Directory_Parent="Release_Dir" DefaultDir="zh-Hant"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SideBySideGuidComponent">
+    <ROW Component="APPDIR" Value="{3A2F132C-A292-4DB4-AFCC-F5EDA446973D}"/>
+    <ROW Component="ProductInformation" Value="{41230B15-0E75-4B3E-8523-2C2BDA4B3685}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{3A2F132C-A292-4DB4-AFCC-F5EDA446973D}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="DAL.dll" ComponentId="{D5097C54-6653-4CC4-BA85-113BAD69BE62}" Directory_="Release_Dir" Attributes="0" KeyPath="DAL.dll"/>
+    <ROW Component="DTO.dll" ComponentId="{005E2C36-BAFA-4219-9188-698463DB0935}" Directory_="Release_Dir" Attributes="0" KeyPath="DTO.dll"/>
+    <ROW Component="Data.sql" ComponentId="{97415A00-F0A0-4486-B4D6-8E4C6EF5163D}" Directory_="DATA_Dir" Attributes="0" KeyPath="Data.sql" Type="0"/>
+    <ROW Component="EnvDTE.dll" ComponentId="{52496D40-AE8A-40CD-B8AE-34E9553DE0D8}" Directory_="Release_Dir" Attributes="0" KeyPath="EnvDTE.dll"/>
+    <ROW Component="GUI.exe" ComponentId="{3465B1CA-4E77-4E8E-94F8-CC4635D60397}" Directory_="app.publish_Dir" Attributes="0" KeyPath="GUI.exe"/>
+    <ROW Component="GUI.exe.config" ComponentId="{9172470D-7A78-4ACB-A45B-2CE31F98C7E0}" Directory_="Release_Dir" Attributes="0" KeyPath="GUI.exe.config" Type="0"/>
+    <ROW Component="GUI.exe_1" ComponentId="{6ED26552-0384-460B-AEDF-7BC89A80C1CA}" Directory_="Release_Dir" Attributes="0" KeyPath="GUI.exe_1"/>
+    <ROW Component="Microsoft.Bcl.AsyncInterfaces.dll" ComponentId="{2E7A6997-D363-486E-86B6-F61A0A3CBF18}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.dll" ComponentId="{BE19A47C-71F9-4B32-ADF4-8B5C804C7721}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_1_urces.dll" ComponentId="{996BE5A1-65FD-43FA-9D74-C9664B16C82A}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_1_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_2_urces.dll" ComponentId="{D334B3A6-A349-4A2E-B321-C10BDD36FF5E}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_2_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_3_urces.dll" ComponentId="{617D6D4E-97FD-4D2D-890B-BDB43C289F9F}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_3_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_4_urces.dll" ComponentId="{E58DBD5A-455A-42C4-A9D1-579F8D5A2904}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_4_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_5_urces.dll" ComponentId="{5326FC8B-5D43-4F55-95DC-A70DC45773AE}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_5_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_6_urces.dll" ComponentId="{3C93FA9A-7D74-4D57-90C6-7D834987667E}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_6_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_7_urces.dll" ComponentId="{7A28BB5F-DF85-4E54-86B4-4113530E7F8E}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_7_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_8_urces.dll" ComponentId="{BA234AC6-64E0-4B5D-9E4C-042C2858F2DD}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_8_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.reso_9_urces.dll" ComponentId="{B19E13DD-045F-4CC0-9049-D2DF2FC8DB46}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.reso_9_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll" ComponentId="{30834A3D-EA7B-4714-889E-ADEED2A1BBE4}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_10_zation.resources.dll" ComponentId="{174B5239-A35A-4180-9F3C-C0B00FD7727D}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_9_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_1_zation.resources.dll" ComponentId="{32D41EB5-5C0C-439F-9E02-EAC3836D01B4}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_1_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_2_zation.resources.dll" ComponentId="{2BA9DDE7-0674-4955-B30C-0AD51B923E6D}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_2_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_3_zation.resources.dll" ComponentId="{A546ACEC-0939-4ADF-A7F9-2E1A84D4B78F}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_3_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_4_zation.resources.dll" ComponentId="{0C16759A-ABBC-4CCF-996C-D5D3C3A79E17}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_4_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_5_zation.resources.dll" ComponentId="{25E82ABB-D386-4B83-BF3E-BD57044DA2C6}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_5_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_6_zation.dll" ComponentId="{C4F44B2E-E7BA-4BFA-93F6-1C71D477FA29}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_7_zation.resources.dll" ComponentId="{F71883D6-9244-4D88-8AB6-B75D83F3F225}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_6_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_8_zation.resources.dll" ComponentId="{AEBFC1A7-7BCF-4646-B3C1-9DE9ABDA6743}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_7_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisuali_9_zation.resources.dll" ComponentId="{C57986B4-2F37-457C-9EC1-DF2965AE4980}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisuali_8_zation.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll" ComponentId="{BB0E23D6-AB5C-4746-89F9-7FF4A638DBF8}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.dll" ComponentId="{A2958052-AA7D-4246-B6F2-EC09FBDE7EBA}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_1_urces.dll" ComponentId="{C984AEE4-2F6F-4CA5-87FB-2EDB672A18B5}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_1_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_2_urces.dll" ComponentId="{08F6257E-CA68-4069-B244-89BD57306EC1}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_2_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_3_urces.dll" ComponentId="{39FDB91D-D759-4409-A218-AF4C0EB9D582}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_3_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_4_urces.dll" ComponentId="{E92E9C67-0B4B-41D6-B1EA-8D98D16B3673}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_4_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_5_urces.dll" ComponentId="{D4681D79-05F6-4203-9E90-7B951265636C}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_5_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_6_urces.dll" ComponentId="{27F6E013-CFFA-442E-94D9-12B8883BD762}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_6_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_7_urces.dll" ComponentId="{DA8C2015-ADBC-4801-B553-BFDE9716A4FE}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_7_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_8_urces.dll" ComponentId="{0D9AB161-8802-4828-B5DE-E7416209F16B}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_8_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.reso_9_urces.dll" ComponentId="{06997529-99E9-4FB0-BE21-78EF209F606B}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.reso_9_urces.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll" ComponentId="{E0A2CAC7-8BAF-4172-8F68-5754AA50C263}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.ProcessingObjectModel.dll" ComponentId="{177B9793-C778-4EDB-8564-6798EAC74912}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.dll" ComponentId="{A4FBAACE-8720-4D7E-A929-02955303E486}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_1_sources.dll" ComponentId="{FF17EC02-F53B-46BD-B0ED-9A62E1F29626}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_1_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_2_sources.dll" ComponentId="{808CD5DB-D691-491F-913C-F7094551B692}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_2_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_3_sources.dll" ComponentId="{5A8F28EB-1E8A-427C-8D50-E159DD5F9F90}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_3_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_4_sources.dll" ComponentId="{CA7A9EAB-7E2B-4A41-8B49-B1BA8E044A48}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_4_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_5_sources.dll" ComponentId="{39C2C1AD-FEBC-4EDF-BD59-342071A46793}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_5_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_6_sources.dll" ComponentId="{65074B75-15F7-4B95-A2F0-D05D0535DC3C}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_6_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_7_sources.dll" ComponentId="{E52E7D23-6B7B-4552-8BEC-72420D6B0122}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_7_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_8_sources.dll" ComponentId="{E4CC262C-7444-44C2-8C8C-606AF520037D}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_8_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.re_9_sources.dll" ComponentId="{5AE0E0C9-0EB8-4385-BEA7-E73557991060}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.re_9_sources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll" ComponentId="{3DF536BB-7351-4522-B3AB-DFCB3821C9A4}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.dll" ComponentId="{45B6408D-4620-4F02-B2E8-FF2A48DA1505}" Directory_="Release_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_1_s.dll" ComponentId="{CC308827-A358-4040-9C02-A3BD3273106A}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_1_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_2_s.dll" ComponentId="{16F736A1-E8FC-4AAF-A148-2D78634D0E46}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_2_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_3_s.dll" ComponentId="{61FAFF47-1CC1-452A-BCC7-6DB474010817}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_3_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_4_s.dll" ComponentId="{8D3CAB2F-ED4E-4A5B-9222-6DCE3DB8ECD7}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_4_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_5_s.dll" ComponentId="{C7A9CFB3-DBD9-4720-B01E-B4ADA4D60F2B}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_5_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_6_s.dll" ComponentId="{91D0DA57-49AC-474E-AA92-445C20742D2B}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_6_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_7_s.dll" ComponentId="{F7F02044-B5A1-4C46-BE76-15D26E73A004}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_7_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_8_s.dll" ComponentId="{971A1A98-864A-401A-ACA2-C54337CB9E13}" Directory_="zhHans_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_8_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resource_9_s.dll" ComponentId="{9A2AA54B-101B-4FBE-893F-4F412D3D2E90}" Directory_="zhHant_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resource_9_s.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.resources.dll" ComponentId="{C8C312F0-6740-4AD6-8888-ACC635F74F02}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.resources.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{114BBE99-3431-4627-9864-C9A60BA02C68}" Directory_="Release_Dir" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{41230B15-0E75-4B3E-8523-2C2BDA4B3685}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="RestSharp.dll" ComponentId="{826B0EE6-2072-4C0C-92A6-44C2849E5F0B}" Directory_="Release_Dir" Attributes="0" KeyPath="RestSharp.dll"/>
+    <ROW Component="SqlServerSpatial160.dll" ComponentId="{B624604F-483F-41CD-9C7B-A380C07F9A59}" Directory_="x64_Dir" Attributes="256" KeyPath="SqlServerSpatial160.dll"/>
+    <ROW Component="SqlServerSpatial160.dll_1" ComponentId="{12C693DB-DB45-4C96-8C63-9F7C33A94BAD}" Directory_="x86_Dir" Attributes="0" KeyPath="SqlServerSpatial160.dll_1"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{EA7D4DC3-DFFE-4796-BD8D-9362035CF50F}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.CodeDom.dll" ComponentId="{AF267210-04E2-4A9E-88ED-BE318100D9A0}" Directory_="Release_Dir" Attributes="0" KeyPath="System.CodeDom.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{94F6093D-9DEF-48C2-B216-43C2F19CC69B}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{1AE55096-9864-48CF-9814-4E82277C9572}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{6789A42A-EEFD-4596-BF57-2DE5BEA8D5C9}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Text.Encodings.Web.dll" ComponentId="{B13359A9-0D29-460C-BD87-88A3CDD1AFE9}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Text.Encodings.Web.dll"/>
+    <ROW Component="System.Text.Json.dll" ComponentId="{502CBE61-11A1-4E96-9348-86909E143603}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Text.Json.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{ABC23383-DB9B-43D8-91CB-E96811539EB4}" Directory_="Release_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Component="System.ValueTuple.dll" ComponentId="{67598752-6E33-4A5C-A511-0A6F8217D64D}" Directory_="Release_Dir" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="stdole.dll" ComponentId="{73A64230-6A5A-4893-A852-5DF1D58D5779}" Directory_="Release_Dir" Attributes="0" KeyPath="stdole.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Data.sql" Component_="Data.sql" FileName="Data.sql" Attributes="0" SourcePath="..\DATA\Data.sql" SelfReg="false"/>
+    <ROW File="DatabaseSetup.bat" Component_="Data.sql" FileName="DATABA~1.BAT|DatabaseSetup.bat" Attributes="0" SourcePath="..\DATA\DatabaseSetup.bat" SelfReg="false"/>
+    <ROW File="GUI.exe" Component_="GUI.exe" FileName="GUI.exe" Attributes="0" SourcePath="..\GUI\bin\Release\app.publish\GUI.exe" SelfReg="false"/>
+    <ROW File="DAL.dll" Component_="DAL.dll" FileName="DAL.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DAL.dll" SelfReg="false"/>
+    <ROW File="DAL.pdb" Component_="DAL.dll" FileName="DAL.pdb" Attributes="0" SourcePath="..\GUI\bin\Release\DAL.pdb" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll" Component_="Microsoft.ReportViewer.Common.resources.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll" Component_="Microsoft.ReportViewer.Design.resources.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll" Component_="Microsoft.ReportViewer.WinForms.resources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resources.dll" Component_="Microsoft.SqlServer.Types.resources.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\de\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="DTO.dll" Component_="DTO.dll" FileName="DTO.dll" Attributes="0" SourcePath="..\GUI\bin\Release\DTO.dll" SelfReg="false"/>
+    <ROW File="DTO.pdb" Component_="DTO.dll" FileName="DTO.pdb" Attributes="0" SourcePath="..\GUI\bin\Release\DTO.pdb" SelfReg="false"/>
+    <ROW File="EnvDTE.dll" Component_="EnvDTE.dll" FileName="EnvDTE.dll" Attributes="0" SourcePath="..\GUI\bin\Release\EnvDTE.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_1_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_1_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_1_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_1_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_1_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_1_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_1_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_1_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_1_s.dll" Component_="Microsoft.SqlServer.Types.resource_1_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\es\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_2_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_2_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_2_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_2_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_2_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_2_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_2_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_2_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_2_s.dll" Component_="Microsoft.SqlServer.Types.resource_2_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\fr\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="GUI.exe_1" Component_="GUI.exe_1" FileName="GUI.exe" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="GUI.exe.config" Component_="GUI.exe.config" FileName="GUIEXE~1.CON|GUI.exe.config" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.exe.config" SelfReg="false"/>
+    <ROW File="GUI.pdb" Component_="GUI.exe_1" FileName="GUI.pdb" Attributes="0" SourcePath="..\GUI\bin\Release\GUI.pdb" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_3_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_3_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_3_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_3_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_3_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_3_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_3_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_3_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_3_s.dll" Component_="Microsoft.SqlServer.Types.resource_3_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\it\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_4_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_4_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_4_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_4_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_4_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_4_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_4_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_4_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_4_s.dll" Component_="Microsoft.SqlServer.Types.resource_4_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ja\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_5_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_5_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_5_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_5_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_5_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_5_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_5_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_5_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_5_s.dll" Component_="Microsoft.SqlServer.Types.resource_5_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ko\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.dll" Component_="Microsoft.Bcl.AsyncInterfaces.dll" FileName="MICROS~1.DLL|Microsoft.Bcl.AsyncInterfaces.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.xml" Component_="GUI.exe.config" FileName="MICROS~1.XML|Microsoft.Bcl.AsyncInterfaces.xml" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.dll" Component_="Microsoft.ReportViewer.Common.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.Common.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.ReportViewer.Common.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.dll" Component_="Microsoft.ReportViewer.DataVisuali_6_zation.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.DataVisualization.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.ReportViewer.DataVisualization.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.dll" Component_="Microsoft.ReportViewer.Design.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.Design.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.ReportViewer.Design.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.ProcessingObjectModel.dll" Component_="Microsoft.ReportViewer.ProcessingObjectModel.dll" FileName="MICROS~5.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.dll" Component_="Microsoft.ReportViewer.WinForms.dll" FileName="MICROS~6.DLL|Microsoft.ReportViewer.WinForms.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.ReportViewer.WinForms.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.dll" Component_="Microsoft.SqlServer.Types.dll" FileName="MICROS~7.DLL|Microsoft.SqlServer.Types.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Microsoft.SqlServer.Types.dll" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\GUI\bin\Release\Newtonsoft.Json.dll" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.xml" Component_="GUI.exe.config" FileName="NEWTON~1.XML|Newtonsoft.Json.xml" Attributes="0" SourcePath="..\GUI\bin\Release\Newtonsoft.Json.xml" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_6_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_6_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_6_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_7_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_6_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_6_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_6_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_6_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_6_s.dll" Component_="Microsoft.SqlServer.Types.resource_6_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\pt\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="RestSharp.dll" Component_="RestSharp.dll" FileName="RESTSH~1.DLL|RestSharp.dll" Attributes="0" SourcePath="..\GUI\bin\Release\RestSharp.dll" SelfReg="false"/>
+    <ROW File="RestSharp.xml" Component_="GUI.exe.config" FileName="RESTSH~1.XML|RestSharp.xml" Attributes="0" SourcePath="..\GUI\bin\Release\RestSharp.xml" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_7_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_7_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_7_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_8_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_7_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_7_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_7_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_7_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_7_s.dll" Component_="Microsoft.SqlServer.Types.resource_7_s.dll" FileName="MICROS~5.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\ru\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="stdole.dll" Component_="stdole.dll" FileName="stdole.dll" Attributes="0" SourcePath="..\GUI\bin\Release\stdole.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.xml" Component_="GUI.exe.config" FileName="SYSTEM~1.XML|System.Buffers.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Buffers.xml" SelfReg="false"/>
+    <ROW File="System.CodeDom.dll" Component_="System.CodeDom.dll" FileName="SYSTEM~2.DLL|System.CodeDom.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.CodeDom.dll" SelfReg="false"/>
+    <ROW File="System.CodeDom.xml" Component_="GUI.exe.config" FileName="SYSTEM~2.XML|System.CodeDom.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.CodeDom.xml" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTEM~3.DLL|System.Memory.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Memory.xml" Component_="GUI.exe.config" FileName="SYSTEM~3.XML|System.Memory.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Memory.xml" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTEM~4.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.xml" Component_="GUI.exe.config" FileName="SYSTEM~4.XML|System.Numerics.Vectors.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Numerics.Vectors.xml" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTEM~5.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.xml" Component_="GUI.exe.config" FileName="SYSTEM~5.XML|System.Runtime.CompilerServices.Unsafe.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Runtime.CompilerServices.Unsafe.xml" SelfReg="false"/>
+    <ROW File="System.Text.Encodings.Web.dll" Component_="System.Text.Encodings.Web.dll" FileName="SYSTEM~6.DLL|System.Text.Encodings.Web.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Text.Encodings.Web.dll" SelfReg="false"/>
+    <ROW File="System.Text.Encodings.Web.xml" Component_="GUI.exe.config" FileName="SYSTEM~6.XML|System.Text.Encodings.Web.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Text.Encodings.Web.xml" SelfReg="false"/>
+    <ROW File="System.Text.Json.dll" Component_="System.Text.Json.dll" FileName="SYSTEM~7.DLL|System.Text.Json.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Text.Json.dll" SelfReg="false"/>
+    <ROW File="System.Text.Json.xml" Component_="GUI.exe.config" FileName="SYSTEM~7.XML|System.Text.Json.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Text.Json.xml" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="System.Threading.Tasks.Extensions.dll" FileName="SYSTEM~8.DLL|System.Threading.Tasks.Extensions.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.Threading.Tasks.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.xml" Component_="GUI.exe.config" FileName="SYSTEM~8.XML|System.Threading.Tasks.Extensions.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.Threading.Tasks.Extensions.xml" SelfReg="false"/>
+    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTEM~9.DLL|System.ValueTuple.dll" Attributes="0" SourcePath="..\GUI\bin\Release\System.ValueTuple.dll" SelfReg="false"/>
+    <ROW File="System.ValueTuple.xml" Component_="GUI.exe.config" FileName="SYSTEM~9.XML|System.ValueTuple.xml" Attributes="0" SourcePath="..\GUI\bin\Release\System.ValueTuple.xml" SelfReg="false"/>
+    <ROW File="SqlServerSpatial160.dll" Component_="SqlServerSpatial160.dll" FileName="SQLSER~1.DLL|SqlServerSpatial160.dll" Attributes="0" SourcePath="..\GUI\bin\Release\x64\SqlServerSpatial160.dll" SelfReg="false"/>
+    <ROW File="SqlServerSpatial160.dll_1" Component_="SqlServerSpatial160.dll_1" FileName="SQLSER~1.DLL|SqlServerSpatial160.dll" Attributes="0" SourcePath="..\GUI\bin\Release\x86\SqlServerSpatial160.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_8_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_8_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_8_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_9_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_8_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_8_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_8_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_8_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.reso_9_urces.dll" Component_="Microsoft.ReportViewer.Common.reso_9_urces.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisuali_9_zation.resources.dll" Component_="Microsoft.ReportViewer.DataVisuali_10_zation.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.reso_9_urces.dll" Component_="Microsoft.ReportViewer.Design.reso_9_urces.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.re_9_sources.dll" Component_="Microsoft.ReportViewer.WinForms.re_9_sources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_8_s.dll" Component_="Microsoft.SqlServer.Types.resource_8_s.dll" FileName="MICROS~1.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-Hans\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.resource_9_s.dll" Component_="Microsoft.SqlServer.Types.resource_9_s.dll" FileName="MICROS~1.DLL|Microsoft.SqlServer.Types.resources.dll" Attributes="0" SourcePath="..\GUI\bin\Release\zh-Hant\Microsoft.SqlServer.Types.resources.dll" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="151"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[DesktopFolder]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="Data.sql"/>
+    <ROW Feature_="MainFeature" Component_="GUI.exe"/>
+    <ROW Feature_="MainFeature" Component_="DAL.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DTO.dll"/>
+    <ROW Feature_="MainFeature" Component_="EnvDTE.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_1_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_1_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_1_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_1_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_1_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_2_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_2_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_2_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_2_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_2_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="GUI.exe_1"/>
+    <ROW Feature_="MainFeature" Component_="GUI.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_3_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_3_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_3_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_3_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_3_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_4_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_4_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_4_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_4_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_4_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_5_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_5_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_5_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_5_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_5_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_6_zation.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.dll"/>
+    <ROW Feature_="MainFeature" Component_="Newtonsoft.Json.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_6_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_7_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_6_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_6_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_6_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="RestSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_7_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_8_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_7_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_7_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_7_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="stdole.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.CodeDom.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Text.Encodings.Web.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Text.Json.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ValueTuple.dll"/>
+    <ROW Feature_="MainFeature" Component_="SqlServerSpatial160.dll"/>
+    <ROW Feature_="MainFeature" Component_="SqlServerSpatial160.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_8_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_9_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_8_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_8_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.reso_9_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisuali_10_zation.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.reso_9_urces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.re_9_sources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_8_s.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.resource_9_s.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="mobileapp.exe" SourcePath="D:\Icon File\mobile-app.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 600)" Description="[ProductName] cannot be installed on [WindowsTypeNT60Display]." DescriptionLocId="AI.LaunchCondition.NoNT60" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_SQLEXPRESS_VERSION &gt;= AI_REQUIRED_SQLEXPRESS_VERSION" Description="[ProductName] cannot be installed on systems without [AI_REQUIRED_SQLEXPRESS_DISPLAY] or higher." DescriptionLocId="AI.LaunchCondition.SQLExpress" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
